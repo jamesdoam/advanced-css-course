@@ -142,5 +142,4 @@ body { /* body element selector, everything related to fonts to be put here*/
 
 .btn::after{ /* this is the after pseudo-element */
     content: ""; /* empty content  but still need to specify it, otherwise not gonna work*/
-
 }
