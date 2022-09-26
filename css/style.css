@@ -111,6 +111,17 @@ body { /* body element selector, everything related to fonts to be put here*/
     100%{
         opacity: 1;
         transform: translate(0);
+    }    
+}
+
+@keyframes moveInTop {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
     
 }
@@ -123,6 +134,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     display: inline-block;
     border-radius: 100px;
     transition: all 0.2s; /*for animation of the button, has to be in the initial state*/
+    position: relative;
 }
 
 .btn:hover {
@@ -140,6 +152,32 @@ body { /* body element selector, everything related to fonts to be put here*/
     color: #777;
 }
 
-.btn::after{ /* this is the after pseudo-element */
+.btn::after{ /* this is the after pseudo-element, which will show up after the button */
     content: ""; /* empty content  but still need to specify it, otherwise not gonna work*/
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
 }
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0;
+}
+
+.btn-animated{
+    animation: moveInTop 1s ease-out 0.5s; /*delay 0.5s*/
+    animation-fill-mode: backwards; /* use this when there is a delay so that the opacity when 0% is applied first*/
+}
+
+
+/* css state : vs css psuedo-element ::
