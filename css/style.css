@@ -43,22 +43,22 @@ body { /* body element selector, everything related to fonts to be put here*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {  /*class selector */
+.header__logo-box {  /*class selector */
     position: absolute;
     top: 4rem;
     left: 4rem; /* counting from the parent element, in this case, the header */
 
 }
 
-.logo {
+.header__logo {
     height: 3.5rem; /*not setting the width mean the width will auto scale*/
 }
 
-.logo-box:hover {
+.header__logo-box:hover {
     animation: moveInRight 5s ease-out;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left:50%;
@@ -72,7 +72,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     backface-visibility: hidden; /*add this so that the letter not shaking at the end of animation */
 }
 
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -82,7 +82,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     animation-timing-function: ease-out;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -154,7 +154,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -172,7 +172,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     transition: all 0.4s;
 }
 
-.btn-white::after{
+.btn--white::after{
     background-color: #fff;
 }
 
@@ -181,7 +181,7 @@ body { /* body element selector, everything related to fonts to be put here*/
     opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
     animation: moveInTop 1s ease-out 0.5s; /*delay 0.5s*/
     animation-fill-mode: backwards; /* use this when there is a delay so that the opacity when 0% is applied first*/
 }
